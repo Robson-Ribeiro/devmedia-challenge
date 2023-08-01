@@ -1,0 +1,24 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+
+<div class="main-container">
+    <% if(posts.length > 0) { %>
+        <div class="posts-container">
+            <% posts.forEach(post => { %>
+                <div class="post">
+                    <h4><%= post.title %></h4>
+                    <p><%= post.text %></p>
+                </div>
+            <% }); %>
+        </div>
+    <% } else { %> 
+    <div class="no-posts">
+        <p>Nenhum post encontrado!</p>
+    </div>
+    <% } %>
+</div>
+
+
+
+<%- include('includes/footer') %>
