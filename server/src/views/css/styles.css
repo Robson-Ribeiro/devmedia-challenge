@@ -21,6 +21,7 @@
 .logo {
     margin-left: 15%;
     font-weight: bold;
+    font-size: 25px;
 }
 
 .navFunctions {
@@ -71,6 +72,9 @@
     border: none;
     background-color: rgb(247, 245, 244);
 }
+.divFormSearch button:hover {
+    cursor: pointer;
+}
 
 .footer {
     position: relative;
@@ -85,14 +89,16 @@
 }
 
 .main-container {
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     background-color: rgb(224, 224, 224);
     padding-top: 3%;
+    padding-bottom: 3%;
 }
 
 .navSpacing {
@@ -103,15 +109,56 @@
 
 .posts-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     height: 100%;
     width: 50%;
+
 }
 
 .post {
     background-color: white;
-    height: 30%;
+    height: 230px;
     width: 20%;
-    padding: 20px
+    padding: 20px;
+    margin: 10px 20px;
+    overflow: hidden;
+}
+
+.post h4 {
+    margin-bottom: 10px;
+}
+
+.post a {
+    text-decoration: none;
+}
+
+.mainFormContainer {
+    height: 85vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: rgb(224, 224, 224);
+}
+
+.postForm {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.postForm label,
+.postForm button {
+    align-self: flex-start;
+    margin: 35px 0 5px 0;
+} 
+
+.postForm button:hover {
+    cursor: pointer;
 }

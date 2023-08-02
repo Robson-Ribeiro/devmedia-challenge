@@ -9,6 +9,7 @@
                 <div class="post">
                     <h4><%= post.title %></h4>
                     <p><%= post.text %></p>
+                    <a href="/post/show/<%= post._id %>">Acessar</a>
                 </div>
             <% }); %>
         </div>
@@ -18,7 +19,6 @@
     </div>
     <% } %>
 </div>
-
 
 
 <%- include('includes/footer') %>

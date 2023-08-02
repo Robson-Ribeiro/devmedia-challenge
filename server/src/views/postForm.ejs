@@ -1,0 +1,14 @@
+<%- include('includes/head') %>
+<%- include('includes/nav') %>
+
+<div class="mainFormContainer">
+    <form action="/post/create" method="POST" class="postForm">
+        <label for="input"> <h3> Título </h3> </label>
+        <input type="text" name="title">
+        <label for="input"> <h3> Texto </h3> </label>
+        <input type="text" name="text">
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+<%- include('includes/footer') %>
