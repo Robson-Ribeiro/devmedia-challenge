@@ -11,7 +11,6 @@ class App {
         this.middlewares();
         this.routes();
         this.setApp();
-        this.connectDB();
     }
 
     middlewares() {
@@ -31,9 +30,6 @@ class App {
         this.app.set('view engine', 'ejs');
     }
 
-    connectDB() {
-
-    }
 }
 
 export default new App().app;
