@@ -6,13 +6,20 @@
     <% if(posts.length > 0) { %>
         <div class="posts-container">
             <% posts.forEach(post => { %>
-                <div class="post">
-                    <h4><%= post.title %></h4>
-                    <p><%= post.text %></p>
-                    <div>
-                        <a href="/post/show/<%= post._id %>">Acessar</a>
+                <a href="/post/show/<%= post._id %>">
+                    <div class="post">
+                        <h4><%= post.title %></h4>
+                        <p><%= post.text %></p>
+                        <div class="postButtons">
+                            <div class="update">
+                                <a href="/post/update/<%= post._id %>">Atualizar</a>
+                            </div>
+                            <div class="delete">
+                                <a href="/post/delete/<%= post._id %>">Apagar</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </a>
             <% }); %>
         </div>
     <% } else { %> 

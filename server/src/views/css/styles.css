@@ -126,7 +126,7 @@ a {
     background-color: white;
     min-height: 40%;
     height: 230px;
-    min-width: 150px;
+    min-width: 190px;
     width: 20%;
     padding: 20px;
     margin: 10px 20px;
@@ -137,28 +137,50 @@ a {
     justify-content: space-between;
     align-items: center;
     border-radius: 5%;
+    transition: 0.5 ease-in-out;
+}
+
+.post:hover {
+    box-shadow: 0 0 3px 4px black;
 }
 
 .post h4 {
     margin-bottom: 10px;
 }
 
-.post div a {
+.post a {
     text-decoration: none;
     color: black;
 }
 
-.post div {
+.postButtons {
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+    margin-left: -10%;
+}
+
+.postButtons div {
     position: relative;
     min-width: 50%;
-    min-height: 15%;
+    height: 50%;
     border-radius: 10%;
-    background-color: rgb(64, 236, 248);
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-self: flex-end;
+    justify-self: flex-start;
     margin: 15px 0 10px 0;
+}
+
+.update {
+    background-color: rgb(64, 236, 248);
+    justify-self: flex-start;
+}
+
+.delete {
+    background-color: rgb(238, 81, 81);
+    justify-self: flex-start;
+    
 }
 
 .mainFormContainer {

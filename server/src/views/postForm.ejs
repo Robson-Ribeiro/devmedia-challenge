@@ -3,11 +3,15 @@
 
 <div class="mainFormContainer">
     <div>
+        <% if(post) { %>
+        <form action="/post/update/<%= post._id %>" method="POST" class="postForm">
+        <% } else { %>
         <form action="/post/create" method="POST" class="postForm">
+        <% } %>
             <label for="input"> <h3> Título </h3> </label>
-            <input type="text" name="title">
+            <input value="<%= post.title %>" type="text" name="title">
             <label for="input"> <h3> Texto </h3> </label>
-            <input type="text" name="text">
+            <input value="<%= post.text %>" type="text" name="text">
             <button type="submit">Enviar</button>
         </form>
     </div>
